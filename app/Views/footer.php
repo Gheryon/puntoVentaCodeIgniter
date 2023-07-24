@@ -16,6 +16,16 @@
 <script src="<?php echo base_url();?>js/scripts.js"></script>
 <script src="<?php echo base_url();?>js/simple-datatables.min.js"></script>
 <script src="<?php echo base_url();?>js/datatables-simple-demo.js"></script>
+<script>
+  var myModal = document.getElementById('modal-confirmar');
+  myModal.addEventListener('show.bs.modal', function(event) {
+    var button = event.relatedTarget
+    //recoge lo que hay en data-href dentro del boton presionado para abrir el modal
+    var href_modal = button.getAttribute('data-href');
+    //reemplaza el href del boton de confirmar con el href anterior
+    var btnok = document.getElementById('btn-ok').setAttribute('href', href_modal);
+});
+</script>
 </body>
 
 </html>

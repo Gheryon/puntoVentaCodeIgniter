@@ -35,8 +35,15 @@ class Unidades extends BaseController{
   }
 
   public function insertar(){
-    $this->unidades->save(['nombre'=>$this->request->getPost('nombre'),'nombre_corto'=>$this->request->getPost('nombre_corto')]);
-    return redirect()->to(base_url().'/Unidades');
+    if($this->request->getMethod()=="post"&&$this->validate(['nombre'=>'required', 'nombre_corto'=>'required'])){
+      $this->unidades->save(['nombre'=>$this->request->getPost('nombre'),'nombre_corto'=>$this->request->getPost('nombre_corto')]);
+      return redirect()->to(base_url().'/Unidades');
+    }else{
+      $data=['titulo'=>'Añadir unidad', 'validation'=>$this->validator];
+      echo view('header');
+      echo view('unidades/nuevo', $data);
+      echo view('footer');
+    }
   }
 
   public function editar($id){

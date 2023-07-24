@@ -3,8 +3,8 @@
     <div class="container-fluid px-4">
       <h1 class="mt-4"><?php echo $titulo; ?></h1>
       <div>
-        <p><a href="<?php echo base_url(); ?>Unidades/nuevo" class="btn btn-info">Añadir</a>
-          <a href="<?php echo base_url(); ?>Unidades/eliminados" class="btn btn-warning">Eliminados</a>
+        <p><a href="<?php echo base_url(); ?>Productos/nuevo" class="btn btn-info">Añadir</a>
+          <a href="<?php echo base_url(); ?>Productos/eliminados" class="btn btn-warning">Eliminados</a>
         </p>
       </div>
       <div class="table-responsive">
@@ -12,8 +12,10 @@
           <thead>
             <tr>
               <th>Id</th>
+              <th>Código</th>
               <th>Nombre</th>
-              <th>Nombre corto</th>
+              <th>Precio</th>
+              <th>Existencias</th>
               <th></th>
               <th></th>
             </tr>
@@ -22,10 +24,12 @@
             <?php foreach ($datos as $dato) { ?>
               <tr>
                 <td><?php echo $dato['id']; ?></td>
+                <td><?php echo $dato['codigo']; ?></td>
                 <td><?php echo $dato['nombre']; ?></td>
-                <td><?php echo $dato['nombre_corto']; ?></td>
-                <td><a href="<?php echo base_url().'Unidades/editar/'.$dato['id']; ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a></td>
-                <td><a href="#" data-href="<?php echo base_url().'Unidades/eliminar/'.$dato['id']; ?>" data-bs-toggle="modal" data-bs-target="#modal-confirmar" data-placement="top" title="Eliminar registro" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+                <td><?php echo $dato['precio_venta']; ?></td>
+                <td><?php echo $dato['existencias']; ?></td>
+                <td><a href="<?php echo base_url().'Productos/editar/'.$dato['id']; ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a></td>
+                <td><a href="#" data-href="<?php echo base_url().'Productos/eliminar/'.$dato['id']; ?>" data-bs-toggle="modal" data-bs-target="#modal-confirmar" data-placement="top" title="Eliminar registro" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
               </tr>
             <?php
             }
