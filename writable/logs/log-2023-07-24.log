@@ -1,0 +1,11 @@
+CRITICAL - 2023-07-24 13:36:07 --> Undefined index: nombre_corto
+in APPPATH\Views\categorias\eliminados.php on line 24.
+ 1 APPPATH\Views\categorias\eliminados.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nombre_corto', 'C:\\xampp\\htdocs\\codeigniter4.3.6\\app\\Views\\categorias\\eliminados.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\codeigniter4.3.6\\app\\Views\\categorias\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('categorias/eliminados', [], true)
+ 5 APPPATH\Controllers\Categorias.php(26): view('categorias/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Categorias->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categorias))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
