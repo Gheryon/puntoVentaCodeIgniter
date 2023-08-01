@@ -2,6 +2,13 @@
   <main>
     <div class="container-fluid px-4">
       <h1 class="mt-4"><?php echo $titulo; ?></h1>
+
+      <?php if(isset($validation)){?>
+        <div class="alert alert-danger">
+          <?php echo $validation->listErrors();?>
+        </div>
+      <?php } ?>
+      
       <form method="POST" action="<?php echo base_url();?>Unidades/actualizar" autocomplete="off">
       <div class="form-group">
         <input type="hidden" value="<?php echo $datos['id']; ?>" name="id">

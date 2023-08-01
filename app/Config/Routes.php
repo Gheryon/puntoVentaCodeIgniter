@@ -58,6 +58,18 @@ $routes->get('Categorias/reinsertar/(:num)', 'Categorias::reinsertar/$1');
 $routes->post('Categorias/insertar', 'Categorias::insertar');
 $routes->post('Categorias/actualizar', 'Categorias::actualizar');
 
+$routes->get('Clientes', 'ClientesController::index');
+$routes->get('Clientes/eliminados', 'ClientesController::eliminados');
+$routes->get('Clientes/nuevo', 'ClientesController::nuevo');
+$routes->get('Clientes/editar/(:num)', 'ClientesController::editar/$1');
+$routes->get('Clientes/eliminar/(:num)', 'ClientesController::eliminar/$1');
+$routes->get('Clientes/reinsertar/(:num)', 'ClientesController::reinsertar/$1');
+$routes->post('Clientes/insertar', 'ClientesController::insertar');
+$routes->post('Clientes/actualizar', 'ClientesController::actualizar');
+
+$routes->get('Configuracion', 'ConfiguracionController::index');
+$routes->post('Configuracion/actualizar', 'ConfiguracionController::actualizar');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

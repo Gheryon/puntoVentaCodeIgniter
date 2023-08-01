@@ -1,0 +1,194 @@
+CRITICAL - 2023-08-01 11:16:11 --> Function name must be a string
+in APPPATH\Views\unidades\nuevo.php on line 7.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('unidades/nuevo', [], true)
+ 4 APPPATH\Controllers\Unidades.php(48): view('unidades/nuevo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Unidades->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 11:18:12 --> Function name must be a string
+in APPPATH\Views\unidades\nuevo.php on line 7.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('unidades/nuevo', [], true)
+ 4 APPPATH\Controllers\Unidades.php(48): view('unidades/nuevo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Unidades->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 11:25:40 --> Function name must be a string
+in APPPATH\Views\unidades\nuevo.php on line 7.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('unidades/nuevo', [], true)
+ 4 APPPATH\Controllers\Unidades.php(61): view('unidades/nuevo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Unidades->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 13:44:00 --> Undefined property: App\Controllers\ClientesController::$unidades
+in APPPATH\Controllers\ClientesController.php on line 49.
+ 1 APPPATH\Controllers\ClientesController.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\ClientesController::$unidades', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Controllers\\ClientesController.php', 49, [])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->nuevo()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 13:44:56 --> Undefined variable: unidades
+in APPPATH\Views\clientes\nuevo.php on line 44.
+ 1 APPPATH\Views\clientes\nuevo.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: unidades', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\clientes\\nuevo.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\clientes\\nuevo.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/nuevo', [], true)
+ 5 APPPATH\Controllers\ClientesController.php(51): view('clientes/nuevo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->nuevo()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:27:58 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('0')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:29:37 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('0')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:30:35 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:30:51 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:34:36 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:35:48 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 14:37:09 --> Function name must be a string
+in APPPATH\Views\clientes\editar.php on line 23.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('clientes/editar', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(68): view('clientes/editar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ClientesController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 15:02:29 --> Undefined variable: titulo
+in APPPATH\Views\configuracion\configuracion.php on line 4.
+ 1 APPPATH\Views\configuracion\configuracion.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: titulo', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php', 4, [])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('configuracion/configuracion', [], true)
+ 5 APPPATH\Controllers\ConfiguracionController.php(35): view('configuracion/configuracion')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ConfiguracionController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConfiguracionController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 15:03:14 --> Undefined variable: titulo
+in APPPATH\Views\configuracion\configuracion.php on line 4.
+ 1 APPPATH\Views\configuracion\configuracion.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: titulo', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php', 4, [])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('configuracion/configuracion', [], true)
+ 5 APPPATH\Controllers\ConfiguracionController.php(35): view('configuracion/configuracion')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ConfiguracionController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConfiguracionController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-01 16:59:35 --> mysqli_sql_exception: Unknown column 'configuracion.deleted_at' in 'where clause' in C:\xampp\htdocs\puntoVentaCodeIgniter\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\puntoVentaCodeIgniter\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puntoVentaCodeIgniter\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puntoVentaCodeIgniter\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puntoVentaCodeIgniter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puntoVentaCodeIgniter\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puntoVentaCodeIgniter\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\puntoVentaCodeIgniter\app\Controllers\ConfiguracionController.php(32): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\puntoVentaCodeIgniter\system\CodeIgniter.php(932): App\Controllers\ConfiguracionController->index()
+#8 C:\xampp\htdocs\puntoVentaCodeIgniter\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConfiguracionController))
+#9 C:\xampp\htdocs\puntoVentaCodeIgniter\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\puntoVentaCodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-01 16:59:35 --> Unknown column 'configuracion.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `configuracion`
+WHERE `nombre` = \'tienda_nombre\'
+AND `configuracion`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `configuracion`
+WHERE `nombre` = \'tienda_nombre\'
+AND `configuracion`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `configuracion`
+WHERE `nombre` = \'tienda_nombre\'
+AND `configuracion`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `configuracion`
+WHERE `nombre` = :nombre:
+AND `configuracion`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\ConfiguracionController.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ConfiguracionController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConfiguracionController))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-01 17:01:25 --> Undefined index: tienda_nombre
+in APPPATH\Views\configuracion\configuracion.php on line 17.
+ 1 APPPATH\Views\configuracion\configuracion.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: tienda_nombre', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php', 17, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\configuracion\\configuracion.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('configuracion/configuracion', [], true)
+ 5 APPPATH\Controllers\ConfiguracionController.php(35): view('configuracion/configuracion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ConfiguracionController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ConfiguracionController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
