@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('UsuariosController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,7 +29,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'UsuariosController::login');
 
 $routes->get('Productos', 'Productos::index');
 $routes->get('Productos/eliminados', 'Productos::eliminados');
@@ -66,6 +66,19 @@ $routes->get('Clientes/eliminar/(:num)', 'ClientesController::eliminar/$1');
 $routes->get('Clientes/reinsertar/(:num)', 'ClientesController::reinsertar/$1');
 $routes->post('Clientes/insertar', 'ClientesController::insertar');
 $routes->post('Clientes/actualizar', 'ClientesController::actualizar');
+
+$routes->get('Usuarios', 'UsuariosController::index');
+$routes->get('Usuarios/eliminados', 'UsuariosController::eliminados');
+$routes->get('Usuarios/nuevo', 'UsuariosController::nuevo');
+$routes->get('Usuarios/editar/(:num)', 'UsuariosController::editar/$1');
+$routes->get('Usuarios/eliminar/(:num)', 'UsuariosController::eliminar/$1');
+$routes->get('Usuarios/reinsertar/(:num)', 'UsuariosController::reinsertar/$1');
+$routes->post('Usuarios/insertar', 'UsuariosController::insertar');
+$routes->post('Usuarios/actualizar', 'UsuariosController::actualizar');
+$routes->post('Usuarios/validar', 'UsuariosController::validar');
+$routes->get('Usuarios/cerrar_sesion', 'UsuariosController::cerrar_sesion');
+$routes->get('Usuarios/cambiar_pass', 'UsuariosController::cambiar_pass');
+$routes->post('Usuarios/actualizarPassword', 'UsuariosController::actualizar_pass');
 
 $routes->get('Configuracion', 'ConfiguracionController::index');
 $routes->post('Configuracion/actualizar', 'ConfiguracionController::actualizar');
