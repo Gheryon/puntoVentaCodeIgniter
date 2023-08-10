@@ -111,5 +111,23 @@ class Productos extends BaseController{
     $this->productos->update($id, ['activo'=>1]);
     return redirect()->to(base_url().'/Productos');
   }
+
+  public function buscar_por_codigo($codigo){
+    $res['existe']=false;
+    $res['datos']='';
+    $res['error']='';
+    $this->productos->select('*');
+    $this->productos->where('codigo', $codigo);
+    $this->productos->where('activo', 1);
+    $datos=$this->productos->get()->getRow();
+
+    if($datos){
+      $res['datos']=$datos;
+      $res['existe']=true;
+    }else{
+      $res['error']='No existe el producto';
+    }
+    echo json_encode($res);
+  }
 }
 ?>

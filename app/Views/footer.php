@@ -12,6 +12,7 @@
 </footer>
 </div>
 </div>
+<script src="<?php echo base_url();?>js/jquery.min.js"></script>
 <script src="<?php echo base_url();?>js/bootstrap.bundle.min.js"></script>
 <script src="<?php echo base_url();?>js/scripts.js"></script>
 <script src="<?php echo base_url();?>js/simple-datatables.min.js"></script>

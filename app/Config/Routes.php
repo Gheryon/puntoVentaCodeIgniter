@@ -37,6 +37,7 @@ $routes->get('Productos/nuevo', 'Productos::nuevo');
 $routes->get('Productos/editar/(:num)', 'Productos::editar/$1');
 $routes->get('Productos/eliminar/(:num)', 'Productos::eliminar/$1');
 $routes->get('Productos/reinsertar/(:num)', 'Productos::reinsertar/$1');
+$routes->get('Productos/buscar_por_codigo/(:segment)', 'Productos::buscar_por_codigo/$1');
 $routes->post('Productos/insertar', 'Productos::insertar');
 $routes->post('Productos/actualizar', 'Productos::actualizar');
 
@@ -66,6 +67,19 @@ $routes->get('Clientes/eliminar/(:num)', 'ClientesController::eliminar/$1');
 $routes->get('Clientes/reinsertar/(:num)', 'ClientesController::reinsertar/$1');
 $routes->post('Clientes/insertar', 'ClientesController::insertar');
 $routes->post('Clientes/actualizar', 'ClientesController::actualizar');
+
+$routes->get('Compras', 'ComprasController::index');
+$routes->get('Compras/eliminados', 'ComprasController::eliminados');
+$routes->get('Compras/Nuevo', 'ComprasController::nuevo');
+$routes->get('Compras/editar/(:num)', 'ComprasController::editar/$1');
+$routes->get('Compras/eliminar/(:num)', 'ComprasController::eliminar/$1');
+$routes->get('Compras/reinsertar/(:num)', 'ComprasController::reinsertar/$1');
+$routes->post('Compras/guardar', 'ComprasController::guardar');
+$routes->post('Compras/actualizar', 'ComprasController::actualizar');
+
+
+$routes->get('ComprasTemporal/insertar/(:num)/(:num)/(:segment)', 'ComprasTemporalController::insertar/$1/$2/$3');
+$routes->get('ComprasTemporal/eliminar/(:num)/(:segment)', 'ComprasTemporalController::eliminar/$1/$2');
 
 $routes->get('Usuarios', 'UsuariosController::index');
 $routes->get('Usuarios/eliminados', 'UsuariosController::eliminados');

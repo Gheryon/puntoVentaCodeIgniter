@@ -2,16 +2,16 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class ProductosModel extends Model{
-	protected $table      = 'productos';
+class DetalleCompraModel extends Model{
+	protected $table      = 'detalle_compra';
 	protected $primaryKey = 'id';
 
 	protected $useAutoIncrement = true;
 
 	protected $returnType     = 'array';
-	protected $useSoftDeletes = true;
+	protected $useSoftDeletes = false;
 
-	protected $allowedFields = ['codigo', 'nombre', 'precio_venta', 'precio_compra', 'existencias', 'stock_minimo', 'inventariable', 'id_unidad', 'id_categoria', 'activo'];
+	protected $allowedFields = ['id_compra', 'id_producto', 'nombre', 'cantidad', 'precio'];
 
 	// Dates
 	protected $useTimestamps = true;
@@ -36,10 +36,14 @@ class ProductosModel extends Model{
 	protected $afterFind      = [];
 	protected $beforeDelete   = [];
 	protected $afterDelete    = [];*/
-	public function actualizarStock($id_producto, $cantidad){
-		$this->set('existencias', "existencias + $cantidad", FALSE);//el false es para que ejecute existencias+$cantidad, sino lo guardaria como una cadena sin ejecutar
-		$this->where('id', $id_producto);
-		$this->update();
+
+	public function insertarCompra($id_compra, $total, $id_usuario){
+		$this->insert([
+      'folio'=>$id_compra,
+      'total'=>$total,
+      'id_usuario'=>$id_usuario
+    ]);
+		return $this->inserID();
 	}
 }
 ?>
