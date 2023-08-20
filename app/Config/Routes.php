@@ -74,6 +74,8 @@ $routes->get('Compras/Nuevo', 'ComprasController::nuevo');
 $routes->get('Compras/editar/(:num)', 'ComprasController::editar/$1');
 $routes->get('Compras/eliminar/(:num)', 'ComprasController::eliminar/$1');
 $routes->get('Compras/reinsertar/(:num)', 'ComprasController::reinsertar/$1');
+$routes->get('Compras/ver_compra_pdf/(:num)', 'ComprasController::muestraCompraPdf/$1');
+$routes->get('Compras/generaCompraPdf/(:num)', 'ComprasController::generaCompraPdf/$1');
 $routes->post('Compras/guardar', 'ComprasController::guardar');
 $routes->post('Compras/actualizar', 'ComprasController::actualizar');
 

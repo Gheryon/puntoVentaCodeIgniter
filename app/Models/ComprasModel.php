@@ -39,7 +39,7 @@ class ComprasModel extends Model{
 
 	public function insertarCompra($id_compra, $total, $id_usuario){
 		$this->insert([
-      'folio'=>$id_compra,
+      'codigo'=>$id_compra,
       'total'=>$total,
       'id_usuario'=>$id_usuario
     ]);

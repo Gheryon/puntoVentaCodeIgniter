@@ -1,0 +1,125 @@
+INFO - 2023-08-20 08:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 08:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 08:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 09:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 09:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 09:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 09:23:33 --> Undefined variable: id_compra
+in APPPATH\Views\compras\ver_compra_pdf.php on line 7.
+ 1 APPPATH\Views\compras\ver_compra_pdf.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_compra', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/ver_compra_pdf', [], true)
+ 5 APPPATH\Controllers\ComprasController.php(70): view('compras/ver_compra_pdf')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->muestraCompraPdf('4')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 09:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 09:25:12 --> Undefined variable: id_compra
+in APPPATH\Views\compras\ver_compra_pdf.php on line 7.
+ 1 APPPATH\Views\compras\ver_compra_pdf.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_compra', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/ver_compra_pdf', [], true)
+ 5 APPPATH\Controllers\ComprasController.php(70): view('compras/ver_compra_pdf')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->muestraCompraPdf('4')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 09:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 09:43:47 --> Undefined variable: id_compra
+in APPPATH\Views\compras\ver_compra_pdf.php on line 7.
+ 1 APPPATH\Views\compras\ver_compra_pdf.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_compra', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\ver_compra_pdf.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/ver_compra_pdf', [], true)
+ 5 APPPATH\Controllers\ComprasController.php(72): view('compras/ver_compra_pdf')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->muestraCompraPdf('4')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 09:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 10:30:02 --> include(C:\xampp\htdocs\puntoVentaCodeIgniter\app\ThirdParty\fpdf/font/helveticav.php): failed to open stream: No such file or directory
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1137.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf/font/helveticav.php): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf\\fpdf.php', 1137, [...])
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1137): include()
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(461): FPDF->_loadfont('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf/font/helveticav.php')
+ 4 APPPATH\ThirdParty\fpdf\fpdf.php(510): FPDF->AddFont('helvetica', 'V')
+ 5 APPPATH\Controllers\ComprasController.php(138): FPDF->SetFont('helvetica', 'V', 8)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->generaCompraPdf('3')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 10:31:04 --> include(C:\xampp\htdocs\puntoVentaCodeIgniter\app\ThirdParty\fpdf/font/helveticav.php): failed to open stream: No such file or directory
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1137.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf/font/helveticav.php): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf\\fpdf.php', 1137, [...])
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1137): include()
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(461): FPDF->_loadfont('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\ThirdParty\\fpdf/font/helveticav.php')
+ 4 APPPATH\ThirdParty\fpdf\fpdf.php(510): FPDF->AddFont('helvetica', 'V')
+ 5 APPPATH\Controllers\ComprasController.php(138): FPDF->SetFont('helvetica', 'V', 8)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->generaCompraPdf('3')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 10:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 10:48:31 --> Undefined variable: datos
+in APPPATH\Views\compras\compras.php on line 22.
+ 1 APPPATH\Views\compras\compras.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datos', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\compras.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/compras', [], true)
+ 5 APPPATH\Controllers\ComprasController.php(26): view('compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 10:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 10:49:39 --> syntax error, unexpected '}', expecting end of file
+in APPPATH\Views\compras\compras.php on line 30.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/compras', [], true)
+ 3 APPPATH\Controllers\ComprasController.php(26): view('compras/compras', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 10:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 10:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-20 10:59:17 --> Undefined index: folio
+in APPPATH\Views\compras\compras.php on line 24.
+ 1 APPPATH\Views\compras\compras.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: folio', 'C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\compras.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\puntoVentaCodeIgniter\\app\\Views\\compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('compras/compras', [], true)
+ 5 APPPATH\Controllers\ComprasController.php(26): view('compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\ComprasController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ComprasController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-20 11:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-20 11:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
