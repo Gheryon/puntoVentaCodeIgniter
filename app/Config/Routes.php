@@ -40,6 +40,7 @@ $routes->get('Productos/reinsertar/(:num)', 'Productos::reinsertar/$1');
 $routes->get('Productos/buscar_por_codigo/(:segment)', 'Productos::buscar_por_codigo/$1');
 $routes->post('Productos/insertar', 'Productos::insertar');
 $routes->post('Productos/actualizar', 'Productos::actualizar');
+$routes->get('Productos/autocompleteData', 'Productos::autocompleteData');
 
 $routes->get('Unidades', 'Unidades::index');
 $routes->get('Unidades/eliminados', 'Unidades::eliminados');
@@ -67,6 +68,7 @@ $routes->get('Clientes/eliminar/(:num)', 'ClientesController::eliminar/$1');
 $routes->get('Clientes/reinsertar/(:num)', 'ClientesController::reinsertar/$1');
 $routes->post('Clientes/insertar', 'ClientesController::insertar');
 $routes->post('Clientes/actualizar', 'ClientesController::actualizar');
+$routes->get('Clientes/autocompleteData', 'ClientesController::autocompleteData');
 
 $routes->get('Compras', 'ComprasController::index');
 $routes->get('Compras/eliminados', 'ComprasController::eliminados');
@@ -79,6 +81,11 @@ $routes->get('Compras/generaCompraPdf/(:num)', 'ComprasController::generaCompraP
 $routes->post('Compras/guardar', 'ComprasController::guardar');
 $routes->post('Compras/actualizar', 'ComprasController::actualizar');
 
+$routes->get('Ventas', 'VentasController::index');
+$routes->get('Ventas/caja', 'VentasController::venta');
+$routes->post('Ventas/guarda', 'VentasController::guardar_venta');
+$routes->get('Ventas/ver_ticket/(:num)', 'VentasController::muestraTicket/$1');
+$routes->get('Ventas/generarTicket/(:num)', 'VentasController::generarTicket/$1');
 
 $routes->get('ComprasTemporal/insertar/(:num)/(:num)/(:segment)', 'ComprasTemporalController::insertar/$1/$2/$3');
 $routes->get('ComprasTemporal/eliminar/(:num)/(:segment)', 'ComprasTemporalController::eliminar/$1/$2');

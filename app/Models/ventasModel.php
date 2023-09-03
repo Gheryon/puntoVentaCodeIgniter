@@ -2,16 +2,16 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class ProductosModel extends Model{
-	protected $table      = 'productos';
+class VentasModel extends Model{
+	protected $table      = 'ventas';
 	protected $primaryKey = 'id';
 
 	protected $useAutoIncrement = true;
 
 	protected $returnType     = 'array';
-	protected $useSoftDeletes = true;
+	protected $useSoftDeletes = false;
 
-	protected $allowedFields = ['codigo', 'nombre', 'precio_venta', 'precio_compra', 'existencias', 'stock_minimo', 'inventariable', 'id_unidad', 'id_categoria', 'activo'];
+	protected $allowedFields = ['codigo', 'total', 'id_usuario', 'id_caja', 'id_cliente', 'forma_pago', 'activo'];
 
 	// Dates
 	protected $useTimestamps = true;
@@ -37,10 +37,16 @@ class ProductosModel extends Model{
 	protected $beforeDelete   = [];
 	protected $afterDelete    = [];*/
 
-	public function actualizarStock($id_producto, $cantidad, $operador='+'){
-		$this->set('existencias', "existencias $operador $cantidad", FALSE);//el false es para que ejecute existencias+$cantidad, sino lo guardaria como una cadena sin ejecutar
-		$this->where('id', $id_producto);
-		$this->update();
+	public function insertarVenta($id_venta, $total, $id_usuario, $id_caja, $id_cliente, $forma_pago){
+		$this->insert([
+      'codigo'=>$id_venta,
+      'total'=>$total,
+      'id_usuario'=>$id_usuario,
+			'id_caja'=>$id_caja,
+			'id_cliente'=>$id_cliente,
+			'forma_pago'=>$forma_pago,
+    ]);
+		return $this->insertID();
 	}
 }
 ?>

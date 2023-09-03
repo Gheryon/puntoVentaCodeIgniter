@@ -13,8 +13,11 @@ $session_user=session();
   <meta name="author" content="" />
   <title>Punto de venta</title>
   <link href="<?php echo base_url();?>css/datatables-style.min.css" rel="stylesheet" />
+  <link href="<?php echo base_url();?>js/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
   <link href="<?php echo base_url();?>css/styles.css" rel="stylesheet" />
   <script src="<?php echo base_url();?>js/all.min.js"></script>
+  <script src="<?php echo base_url();?>js/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>js/jquery-ui/jquery-ui.min.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -58,7 +61,7 @@ $session_user=session();
             </div>
             <a class="nav-link" href="<?php echo base_url();?>Clientes"><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>Clientes</a>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuCompras" aria-expanded="false" aria-controls="menuCompras">
-              <div class="sb-nav-link-icon"><i class="fas fa-cash-register"></i></div>
+              <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
               Compras
               <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
             </a>
@@ -68,6 +71,7 @@ $session_user=session();
                 <a class="nav-link" href="<?php echo base_url();?>Compras">Compras</a>
               </nav>
             </div>
+            <a class="nav-link" href="<?php echo base_url();?>Ventas/caja"><div class="sb-nav-link-icon"><i class="fas fa-cash-register"></i></div>Venta</a>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#subAdministracion" aria-expanded="false" aria-controls="subAdministracion">
               <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
               Administración
