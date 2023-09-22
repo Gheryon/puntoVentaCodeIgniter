@@ -86,6 +86,8 @@ $routes->get('Ventas/caja', 'VentasController::venta');
 $routes->post('Ventas/guarda', 'VentasController::guardar_venta');
 $routes->get('Ventas/ver_ticket/(:num)', 'VentasController::muestraTicket/$1');
 $routes->get('Ventas/generarTicket/(:num)', 'VentasController::generarTicket/$1');
+$routes->get('Ventas/eliminados', 'VentasController::eliminados');
+$routes->get('Ventas/eliminar/(:num)', 'VentasController::eliminar/$1');
 
 $routes->get('ComprasTemporal/insertar/(:num)/(:num)/(:segment)', 'ComprasTemporalController::insertar/$1/$2/$3');
 $routes->get('ComprasTemporal/eliminar/(:num)/(:segment)', 'ComprasTemporalController::eliminar/$1/$2');

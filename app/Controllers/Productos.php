@@ -69,6 +69,28 @@ class Productos extends BaseController{
       'inventariable'=>$this->request->getPost('inventariable'),
       'id_unidad'=>$this->request->getPost('id_unidad'),
       'id_categoria'=>$this->request->getPost('id_categoria')]);
+
+
+      $validacion=$this->validate([
+        'img_producto' => [
+          'uploaded[img_producto]',
+          'mime_in[img_producto,image/png, image/jpeg, image/jpg]',
+          'max_size[img_producto, 4096]'
+        ]
+      ]);
+
+      if($validacion){
+        $id=$this->productos->insertID();
+        $ruta_logo="images/productos/".$id.".png";
+        if(file_exists($ruta_logo)){
+          unlink($ruta_logo);
+        }
+        $logo=$this->request->getFile('img_producto');
+        $logo->move('./images/productos/', $id.'.png');
+      }else{
+        echo 'Error en la validacion';
+        exit;
+      }
       return redirect()->to(base_url().'/Productos');
     }else{
       $unidades=$this->unidades->where('activo', 1)->findAll();

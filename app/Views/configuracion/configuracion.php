@@ -8,7 +8,7 @@
         </div>
       <?php } ?>
 
-      <form method="POST" action="<?php echo base_url();?>Configuracion/actualizar" autocomplete="off">
+      <form method="POST" enctype="multipart/form-data" action="<?php echo base_url();?>Configuracion/actualizar" autocomplete="off">
       <?php csrf_field();?>
       <div class="form-group">
         <div class="row">
@@ -46,6 +46,16 @@
           </div>
         </div>
       </div>
+      <div class="form-group">
+        <div class="row">
+        <div class="col-12 col-sm-6">
+          <label for="Logotipo">Logotipo</label><br />
+          <img src="<?php echo base_url().'images/logotipo.png';?>" class="img-responsive" width="200"/>
+          <input type="file" id="tienda_logo" name="tienda_logo" accept="image/png"/>
+        </div>
+        </div>
+      </div>
+
         <a href="<?php echo base_url();?>Configuracion/" class="btn btn-primary">Volver</a>
         <button type="submit" class="btn btn-success">Guardar</button>
       </form>

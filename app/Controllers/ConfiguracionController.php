@@ -10,7 +10,7 @@ class ConfiguracionController extends BaseController{
   public function __construct()
   {
     $this->configuracion=new ConfiguracionModel();
-    helper(['form']);
+    helper(['form', 'upload']);
     $this->reglas=[
       'tienda_nombre'=> [
         'rules'=>'required', 
@@ -49,6 +49,27 @@ class ConfiguracionController extends BaseController{
       $this->configuracion->whereIn('nombre', ['tienda_email'])->set(['valor'=>$this->request->getPost('tienda_email')])->update();
       $this->configuracion->whereIn('nombre', ['tienda_direccion'])->set(['valor'=>$this->request->getPost('tienda_direccion')])->update();
       $this->configuracion->whereIn('nombre', ['ticket_leyenda'])->set(['valor'=>$this->request->getPost('ticket_leyenda')])->update();
+
+      $validacion=$this->validate([
+        'tienda_logo' => [
+          'uploaded[tienda_logo]',
+          'mime_in[tienda_logo,image/png]',
+          'max_size[tienda_logo, 4096]'
+        ]
+      ]);
+
+      if($validacion){
+        $ruta_logo="images/logotipo.png";
+        if(file_exists($ruta_logo)){
+          unlink($ruta_logo);
+        }
+        $logo=$this->request->getFile('tienda_logo');
+        $logo->move('./images', 'logotipo.png');
+      }else{
+        echo 'Error en la validacion';
+        exit;
+      }
+      
       return redirect()->to(base_url().'/Configuracion');
     }else{
       //return $this->editar($this->request->getPost('id'), $this->validator);

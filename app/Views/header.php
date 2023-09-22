@@ -72,6 +72,9 @@ $session_user=session();
               </nav>
             </div>
             <a class="nav-link" href="<?php echo base_url();?>Ventas/caja"><div class="sb-nav-link-icon"><i class="fas fa-cash-register"></i></div>Venta</a>
+
+            <a class="nav-link" href="<?php echo base_url();?>Ventas"><div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>Ventas</a>
+            
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#subAdministracion" aria-expanded="false" aria-controls="subAdministracion">
               <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
               Administración

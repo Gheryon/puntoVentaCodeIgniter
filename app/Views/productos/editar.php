@@ -71,6 +71,17 @@
           </div>
         </div>
       </div>
+
+      <div class="form-group">
+        <div class="row">
+        <div class="col-12 col-sm-6">
+          <label for="Logotipo">Logotipo</label><br />
+          <img src="<?php echo base_url().'images/productos/'.$producto['id'].'.png';?>" class="img-responsive" width="200"/>
+          <input type="file" id="img_producto" name="img_producto" accept="image/png"/>
+        </div>
+        </div>
+      </div>
+
         <a href="<?php echo base_url();?>Productos/" class="btn btn-primary">Volver</a>
         <button type="submit" class="btn btn-success">Guardar</button>
       </form>

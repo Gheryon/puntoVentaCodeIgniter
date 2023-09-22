@@ -14,15 +14,24 @@ class VentasController extends BaseController{
   {
     $this->ventas=new VentasModel();
     $this->detalle_venta=new DetalleVentaModel();
+    $this->productos=new ProductosModel();
     $this->configuracion=new ConfiguracionModel();
     helper(['form']);
   }
 
-  public function index($activo=1){
-    $ventas=$this->ventas->where('activo', $activo)->findAll();
-    $data=['titulo'=>'Historial de ventas', 'ventas'=>$ventas];
+  public function index(){
+    $datos=$this->ventas->obtener(1);
+    $data=['titulo'=>'Historial de ventas', 'datos'=>$datos];
     echo view('header');
     echo view('ventas/ventas', $data);
+    echo view('footer');
+  }
+
+  public function eliminados(){
+    $datos=$this->ventas->obtener(0);
+    $data=['titulo'=>'Historial de ventas eliminadas', 'datos'=>$datos];
+    echo view('header');
+    echo view('ventas/eliminados', $data);
     echo view('footer');
   }
 
@@ -136,6 +145,16 @@ class VentasController extends BaseController{
     $this->response->setHeader('Content-Type', 'application/pdf');
     $pdf->Output("ticket.pdf", "I");
 
+  }
+
+  public function eliminar($id){
+    $productos=$this->detalle_venta->where('id_venta', $id)->findAll();
+    foreach ($productos as $producto) {
+      $this->productos->actualizarStock($producto['id_producto'], $producto['cantidad'], '+');
+    }
+
+    $this->ventas->update($id, ['activo' => 0]);
+    return redirect()->to(base_url().'Ventas');
   }
 }
 ?>

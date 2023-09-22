@@ -3,35 +3,31 @@
     <div class="container-fluid px-4">
       <h1 class="mt-4"><?php echo $titulo; ?></h1>
       <div>
-        <p><a href="<?php echo base_url(); ?>Productos/nuevo" class="btn btn-info">Añadir</a>
-          <a href="<?php echo base_url(); ?>Productos/eliminados" class="btn btn-warning">Eliminados</a>
+        <p>
+          <a href="<?php echo base_url(); ?>Ventas" class="btn btn-success">Ventas</a>
         </p>
       </div>
       <div class="table-responsive">
         <table class="table table-bordered" id="datatablesSimple">
           <thead>
             <tr>
-              <th>Id</th>
+              <th>Fecha</th>
               <th>Código</th>
-              <th>Nombre</th>
-              <th>Precio</th>
-              <th>Existencias</th>
-              <th>Imagen</th>
-              <th></th>
+              <th>Cliente</th>
+              <th>Total</th>
+              <th>Cajero</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <?php foreach ($datos as $dato) { ?>
               <tr>
-                <td><?php echo $dato['id']; ?></td>
+                <td><?php echo $dato['fecha_alta']; ?></td>
                 <td><?php echo $dato['codigo']; ?></td>
-                <td><?php echo $dato['nombre']; ?></td>
-                <td><?php echo $dato['precio_venta']; ?></td>
-                <td><?php echo $dato['existencias']; ?></td>
-                <td><img src="<?php echo base_url().'images/productos/'.$dato['id'].'.png';?>" width="100" /></td>
-                <td><a href="<?php echo base_url().'Productos/editar/'.$dato['id']; ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></a></td>
-                <td><a href="#" data-href="<?php echo base_url().'Productos/eliminar/'.$dato['id']; ?>" data-bs-toggle="modal" data-bs-target="#modal-confirmar" data-placement="top" title="Eliminar registro" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+                <td><?php echo $dato['cliente']; ?></td>
+                <td><?php echo $dato['total']; ?></td>
+                <td><?php echo $dato['cajero']; ?></td>
+                <td><a href="<?php echo base_url().'Ventas/ver_ticket/'.$dato['id']; ?>" class="btn btn-primary"><i class="fas fa-list-alt"></i></a></td>
               </tr>
             <?php
             }
