@@ -23,7 +23,7 @@ $session_user=session();
 <body class="sb-nav-fixed">
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">Punto de venta</a>
+    <a class="navbar-brand ps-3" href="<?php echo base_url();?>/Inicio">Punto de venta</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     
@@ -60,6 +60,7 @@ $session_user=session();
               </nav>
             </div>
             <a class="nav-link" href="<?php echo base_url();?>Clientes"><div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>Clientes</a>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuCompras" aria-expanded="false" aria-controls="menuCompras">
               <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
               Compras
@@ -75,6 +76,17 @@ $session_user=session();
 
             <a class="nav-link" href="<?php echo base_url();?>Ventas"><div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>Ventas</a>
             
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuReportes" aria-expanded="false" aria-controls="menuReportes">
+              <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
+              Reportes
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="menuReportes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="<?php echo base_url();?>Productos/mostrarMinimos">Reporte mínimos</a>
+              </nav>
+            </div>
+
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#subAdministracion" aria-expanded="false" aria-controls="subAdministracion">
               <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
               Administración

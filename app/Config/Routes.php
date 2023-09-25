@@ -41,6 +41,10 @@ $routes->get('Productos/buscar_por_codigo/(:segment)', 'Productos::buscar_por_co
 $routes->post('Productos/insertar', 'Productos::insertar');
 $routes->post('Productos/actualizar', 'Productos::actualizar');
 $routes->get('Productos/autocompleteData', 'Productos::autocompleteData');
+$routes->get('Productos/generarCodigoBarras', 'Productos::generarCodigoBarras');
+$routes->get('Productos/muestraCodigos', 'Productos::muestraCodigos');
+$routes->get('Productos/generarMinimosPdf', 'Productos::generarMinimosPdf');
+$routes->get('Productos/mostrarMinimos', 'Productos::muestraMinimos');
 
 $routes->get('Unidades', 'Unidades::index');
 $routes->get('Unidades/eliminados', 'Unidades::eliminados');
@@ -107,6 +111,8 @@ $routes->post('Usuarios/actualizarPassword', 'UsuariosController::actualizar_pas
 
 $routes->get('Configuracion', 'ConfiguracionController::index');
 $routes->post('Configuracion/actualizar', 'ConfiguracionController::actualizar');
+
+$routes->get('Inicio', 'InicioController::index');
 
 /*
  * --------------------------------------------------------------------

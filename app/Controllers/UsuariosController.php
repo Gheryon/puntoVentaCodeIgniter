@@ -210,7 +210,7 @@ class UsuariosController extends BaseController{
           ];
           $session=session();
           $session->set($datosSesion);
-          return redirect()->to(base_url().'Configuracion');
+          return redirect()->to(base_url().'Inicio');
         }else{
           $data['error']="La constraseña es incorrecta.";
           echo view('login', $data);

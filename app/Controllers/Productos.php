@@ -166,5 +166,66 @@ class Productos extends BaseController{
     }
     echo json_encode($returnData);
   }
+
+  public function generarCodigoBarras(){
+    $pdf=new \FPDF('P', 'mm', 'letter');
+    $pdf->AddPage();
+    $pdf->SetMargins(10,10,10);
+    $pdf->SetTitle("Códigos de barras");
+
+    $productos=$this->productos->where('activo', 1)->findAll();
+
+    foreach ($productos as $producto) {
+      $codigo=$producto['codigo'];
+      $generaBarcode=new \barcode_genera();
+      $generaBarcode->barcode("images/barcode/".$codigo.".png", $codigo, 20, "horizontal", "code39", true);
+      $pdf->Image("images/barcode/".$codigo.".png");
+      //unlink("images/barcode/".$codigo.".png");
+    }
+    $this->response->setHeader('Content-Type', 'application/pdf');
+    $pdf->Output('Codigos.pdf', 'I');
+  }
+
+  function muestraCodigos(){
+    echo view('header');
+    echo view('Productos/ver_codigos');
+    echo view('footer');
+  }
+
+  public function generarMinimosPdf(){
+    $pdf=new \FPDF('P', 'mm', 'letter');
+    $pdf->AddPage();
+    $pdf->SetMargins(10,10,10);
+    $pdf->SetTitle(utf8_decode("Productos con stock mínimo"));
+
+    $pdf->SetFont("Arial", 'B', 10);
+    $pdf->Image("images/logotipo.png", 10, 5, 25);
+
+    $pdf->Cell(0, 5, utf8_decode("Reporte de productos con stock mínimo."), 0, 1, 'C');
+
+    $pdf->Ln(20);
+    $pdf->Cell(40, 5, utf8_decode("Código"), 1, 0, 'C');
+    $pdf->Cell(80, 5, utf8_decode("Nombre"), 1, 0, 'C');
+    $pdf->Cell(30, 5, utf8_decode("Existencias"), 1, 0, 'C');
+    $pdf->Cell(30, 5, utf8_decode("Mínimo"), 1, 1, 'C');
+    
+    $productos=$this->productos->getProductosMinimo();
+
+    foreach ($productos as $producto) {
+      $pdf->Cell(40, 5, $producto['codigo'], 1, 0, 'C');
+      $pdf->Cell(80, 5, $producto['nombre'], 1, 0, 'C');
+      $pdf->Cell(30, 5, $producto['existencias'], 1, 0, 'C');
+      $pdf->Cell(30, 5, $producto['stock_minimo'], 1, 1, 'C');
+    }
+
+    $this->response->setHeader('Content-Type', 'application/pdf');
+    $pdf->Output('productosMinimos.pdf', 'I');
+  }
+
+  function muestraMinimos(){
+    echo view('header');
+    echo view('Productos/ver_minimos');
+    echo view('footer');
+  }
 }
 ?>

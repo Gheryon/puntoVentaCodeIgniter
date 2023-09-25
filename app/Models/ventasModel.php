@@ -59,5 +59,11 @@ class VentasModel extends Model{
 		//print_r($this->getLastQuery());
 		return $datos;
 	}
+
+	public function totalDia($fecha){
+		$this->select("sum(total) AS total");
+		$where="activo = 1 AND DATE(fecha_alta) = '$fecha'";
+		return $this->where($where)->first();
+	}
 }
 ?>

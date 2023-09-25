@@ -5,6 +5,7 @@
       <div>
         <p><a href="<?php echo base_url(); ?>Productos/nuevo" class="btn btn-info">Añadir</a>
           <a href="<?php echo base_url(); ?>Productos/eliminados" class="btn btn-warning">Eliminados</a>
+          <a href="<?php echo base_url(); ?>Productos/muestraCodigos" class="btn btn-primary">Códigos de barras</a>
         </p>
       </div>
       <div class="table-responsive">
