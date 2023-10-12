@@ -74,6 +74,17 @@ $routes->post('Clientes/insertar', 'ClientesController::insertar');
 $routes->post('Clientes/actualizar', 'ClientesController::actualizar');
 $routes->get('Clientes/autocompleteData', 'ClientesController::autocompleteData');
 
+$routes->get('Roles', 'RolesController::index');
+$routes->get('Roles/eliminados', 'RolesController::eliminados');
+$routes->get('Roles/nuevo', 'RolesController::nuevo');
+$routes->get('Roles/editar/(:num)', 'RolesController::editar/$1');
+$routes->get('Roles/eliminar/(:num)', 'RolesController::eliminar/$1');
+$routes->get('Roles/reinsertar/(:num)', 'RolesController::reinsertar/$1');
+$routes->post('Roles/insertar', 'RolesController::insertar');
+$routes->post('Roles/actualizar', 'RolesController::actualizar');
+$routes->get('Roles/detalles/(:num)', 'RolesController::detalles/$1');
+$routes->post('Roles/guardarPermisos', 'RolesController::guardarPermisos');
+
 $routes->get('Compras', 'ComprasController::index');
 $routes->get('Compras/eliminados', 'ComprasController::eliminados');
 $routes->get('Compras/Nuevo', 'ComprasController::nuevo');

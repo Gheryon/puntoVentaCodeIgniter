@@ -6,9 +6,10 @@ use App\Models\ComprasTemporalModel;
 use App\Models\DetalleVentaModel;
 use App\Models\ProductosModel;
 use App\Models\ConfiguracionModel;
+use App\Models\CajasModel;
 
 class VentasController extends BaseController{
-  protected $ventas, $compras_temporal, $detalle_venta, $productos, $configuracion;
+  protected $ventas, $compras_temporal, $detalle_venta, $productos, $configuracion, $cajas, $session;
 
   public function __construct()
   {
@@ -16,6 +17,8 @@ class VentasController extends BaseController{
     $this->detalle_venta=new DetalleVentaModel();
     $this->productos=new ProductosModel();
     $this->configuracion=new ConfiguracionModel();
+    $this->cajas=new CajasModel();
+    $this->session=session();
     helper(['form']);
   }
 
@@ -36,6 +39,9 @@ class VentasController extends BaseController{
   }
 
   public function venta(){
+    if(!isset($this->session->id_usuario)){
+			return redirect()->to(base_url());
+		}
     echo view('header');
     echo view('ventas/caja');
     echo view('footer');
@@ -46,10 +52,15 @@ class VentasController extends BaseController{
     $forma_pago=$this->request->getPost('forma_pago');
     $id_cliente=$this->request->getPost('id_cliente');
     $total=preg_replace('/[\$,]/', '', $this->request->getPost('total'));
-    $session=session();
-    $resultado_id=$this->ventas->insertarVenta($id_venta, $total, $session->id_usuario, $session->id_caja, $id_cliente, $forma_pago);
+    
+    $caja=$this->cajas->where('id', $this->session->id_caja)->first();
+    $codigo=$caja['codigo'];
+
+    $resultado_id=$this->ventas->insertarVenta($codigo, $total, $session->id_usuario, $session->id_caja, $id_cliente, $forma_pago);
     
     if($resultado_id){
+      $codigo++;
+      $this->cajas->update($session->id_caja, ['codigo'=>$codigo]);
       $this->compras_temporal=new ComprasTemporalModel();
       $resultadoCompra=$this->compras_temporal->porCompra($id_venta);
       foreach($resultadoCompra as $row){

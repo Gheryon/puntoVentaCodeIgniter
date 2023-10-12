@@ -72,6 +72,7 @@ $session_user=session();
                 <a class="nav-link" href="<?php echo base_url();?>Compras">Compras</a>
               </nav>
             </div>
+
             <a class="nav-link" href="<?php echo base_url();?>Ventas/caja"><div class="sb-nav-link-icon"><i class="fas fa-cash-register"></i></div>Venta</a>
 
             <a class="nav-link" href="<?php echo base_url();?>Ventas"><div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>Ventas</a>
@@ -96,6 +97,7 @@ $session_user=session();
               <nav class="sb-sidenav-menu-nested nav">
                 <a class="nav-link" href="<?php echo base_url();?>Configuracion">Configuración</a>
                 <a class="nav-link" href="<?php echo base_url();?>Usuarios">Usuarios</a>
+                <a class="nav-link" href="<?php echo base_url();?>Roles">Roles</a>
               </nav>
             </div>
           </div>

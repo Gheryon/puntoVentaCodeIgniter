@@ -4,9 +4,10 @@ use App\Controllers\BaseController;
 use App\Models\ProductosModel;
 use App\Models\CategoriasModel;
 use App\Models\UnidadesModel;
+use App\Models\DetalleRolesPermisosModel;
 
 class Productos extends BaseController{
-  protected $productos;
+  protected $productos, $detalleRoles, $session;
   protected $unidades;
   protected $categorias;
   protected $reglas;
@@ -16,6 +17,8 @@ class Productos extends BaseController{
     $this->productos=new ProductosModel();
     $this->unidades=new UnidadesModel();
     $this->categorias=new CategoriasModel();
+    $this->detalleRoles=new DetalleRolesPermisosModel();
+    $this->session=session();
 
     helper(['form']);
     $this->reglas=[
@@ -36,11 +39,16 @@ class Productos extends BaseController{
   }
 
   public function index($activo=1){
-    $productos=$this->productos->where('activo', $activo)->findAll();
-    $data=['titulo'=>'Productos', 'datos'=>$productos];
-    echo view('header');
-    echo view('productos/productos', $data);
-    echo view('footer');
+    $permiso=$this->detalleRoles->verificaPermisos($this->session->id_rol, 'ProductosCatalogo');
+    if(!$permiso){
+      echo 'No tiene permiso';
+    }else{
+      $productos=$this->productos->where('activo', $activo)->findAll();
+      $data=['titulo'=>'Productos', 'datos'=>$productos];
+      echo view('header');
+      echo view('productos/productos', $data);
+      echo view('footer');
+    }
   }
 
   public function eliminados($activo=0){

@@ -4,15 +4,17 @@ use App\Controllers\BaseController;
 use App\Models\UsuariosModel;
 use App\Models\CajasModel;
 use App\Models\RolesModel;
+use App\Models\LogsModel;
 
 class UsuariosController extends BaseController{
-  protected $usuarios, $cajas, $roles;
+  protected $usuarios, $cajas, $roles, $logs;
   protected $reglas, $reglasEditar, $reglasLogin, $reglasCambiarPass;
 
   public function __construct(){
     $this->usuarios=new UsuariosModel();
     $this->cajas=new CajasModel();
     $this->roles=new RolesModel();
+    $this->logs=new LogsModel();
     helper(['form']);
     $this->reglas=[
       'usuario'=> [
@@ -208,6 +210,17 @@ class UsuariosController extends BaseController{
             'id_caja'=>$datosUsuario['id_caja'],
             'id_rol'=>$datosUsuario['id_rol']
           ];
+
+          $ip=$_SERVER['REMOTE_ADDR'];//devuelve la ip del usuario
+          $detalles=$_SERVER['HTTP_USER_AGENT'];//devuelve el navegador del usuario
+
+          $this->logs->save([
+            'id_usuario'=>$datosUsuario['id'],
+            'evento' => 'Inicio sesión',
+            'ip' => $ip,
+            'detalles'=> $detalles
+          ]);
+
           $session=session();
           $session->set($datosSesion);
           return redirect()->to(base_url().'Inicio');
@@ -227,6 +240,16 @@ class UsuariosController extends BaseController{
   
   public function cerrar_sesion(){
     $session=session();
+    $ip=$_SERVER['REMOTE_ADDR'];//devuelve la ip del usuario
+    $detalles=$_SERVER['HTTP_USER_AGENT'];//devuelve el navegador del usuario
+
+    $this->logs->save([
+      'id_usuario'=>$session->id_usuario,
+      'evento' => 'Cerrar sesión',
+      'ip' => $ip,
+      'detalles'=> $detalles
+    ]);
+
     $session->destroy();
     return redirect()->to(base_url());
   }
