@@ -85,6 +85,20 @@ $routes->post('Roles/actualizar', 'RolesController::actualizar');
 $routes->get('Roles/detalles/(:num)', 'RolesController::detalles/$1');
 $routes->post('Roles/guardarPermisos', 'RolesController::guardarPermisos');
 
+$routes->get('Cajas', 'CajasController::index');
+$routes->get('Cajas/eliminados', 'CajasController::eliminados');
+$routes->get('Cajas/nuevo', 'CajasController::nuevo');
+$routes->get('Cajas/editar/(:num)', 'CajasController::editar/$1');
+$routes->get('Cajas/eliminar/(:num)', 'CajasController::eliminar/$1');
+$routes->get('Cajas/reinsertar/(:num)', 'CajasController::reinsertar/$1');
+$routes->post('Cajas/insertar', 'CajasController::insertar');
+$routes->post('Cajas/actualizar', 'CajasController::actualizar');
+$routes->get('Cajas/arqueo/(:num)', 'CajasController::arqueo/$1');
+$routes->post('Cajas/nuevo_arqueo', 'CajasController::nuevo_arqueo');
+$routes->get('Cajas/nuevo_arqueo', 'CajasController::nuevo_arqueo');
+$routes->get('Cajas/cerrar/(:num)', 'CajasController::cierre/$1');
+$routes->post('Cajas/cerrar', 'CajasController::cierre');
+
 $routes->get('Compras', 'ComprasController::index');
 $routes->get('Compras/eliminados', 'ComprasController::eliminados');
 $routes->get('Compras/Nuevo', 'ComprasController::nuevo');

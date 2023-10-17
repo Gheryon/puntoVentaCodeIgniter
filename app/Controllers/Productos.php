@@ -82,7 +82,7 @@ class Productos extends BaseController{
       $validacion=$this->validate([
         'img_producto' => [
           'uploaded[img_producto]',
-          'mime_in[img_producto,image/png, image/jpeg, image/jpg]',
+          'mime_in[img_producto,image/png,image/jpeg,image/jpg]',
           'max_size[img_producto, 4096]'
         ]
       ]);

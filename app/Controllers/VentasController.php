@@ -56,11 +56,11 @@ class VentasController extends BaseController{
     $caja=$this->cajas->where('id', $this->session->id_caja)->first();
     $codigo=$caja['codigo'];
 
-    $resultado_id=$this->ventas->insertarVenta($codigo, $total, $session->id_usuario, $session->id_caja, $id_cliente, $forma_pago);
+    $resultado_id=$this->ventas->insertarVenta($codigo, $total, $this->session->id_usuario, $this->session->id_caja, $id_cliente, $forma_pago);
     
     if($resultado_id){
       $codigo++;
-      $this->cajas->update($session->id_caja, ['codigo'=>$codigo]);
+      $this->cajas->update($this->session->id_caja, ['codigo'=>$codigo]);
       $this->compras_temporal=new ComprasTemporalModel();
       $resultadoCompra=$this->compras_temporal->porCompra($id_venta);
       foreach($resultadoCompra as $row){
